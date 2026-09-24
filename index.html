@@ -10,102 +10,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-const animatedItems = document.querySelectorAll(
-    "section, .project-card, .skill-card, .card"
-);
-
-animatedItems.forEach(item => {
-    item.classList.add("scroll-reveal");
-});
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-                observer.unobserve(entry.target);
-            }
-        });
-    },
-    {
-        threshold: 0.12
-    }
-);
-
-animatedItems.forEach(item => observer.observe(item));
-</script>
-<script>
-const heading = document.querySelector(".hero h1");
-
-if (heading) {
-    const originalText = heading.textContent.trim();
-    heading.textContent = "";
-
-    let i = 0;
-
-    function typeText() {
-        if (i < originalText.length) {
-            heading.textContent += originalText.charAt(i);
-            i++;
-            setTimeout(typeText, 70);
-        }
-    }
-
-    setTimeout(typeText, 700);
-}
-</script>
-<script>
-const hero = document.querySelector(".hero");
-
-if (hero) {
-    for (let i = 0; i < 18; i++) {
-        const particle = document.createElement("span");
-
-        particle.className = "hero-particle";
-
-        particle.style.left = Math.random() * 100 + "%";
-        particle.style.animationDuration =
-            (7 + Math.random() * 8) + "s";
-
-        particle.style.animationDelay =
-            Math.random() * 8 + "s";
-
-        particle.style.opacity =
-            0.2 + Math.random() * 0.6;
-
-        hero.appendChild(particle);
-    }
-}
-</script>
-<script>
-const sections = document.querySelectorAll(".section");
-
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-            }
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-sections.forEach((section) => {
-    section.classList.add("hidden");
-    observer.observe(section);
-});
-</script>
 <body>
 
     <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
 
-            <div class="logo">Aditya<span>.</span></div>
+            <div class="logo">
+                Aditya<span>.</span>
+            </div>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -125,13 +38,17 @@ sections.forEach((section) => {
 
         <div class="hero-text">
 
-            <p class="small-title">WELCOME TO MY PORTFOLIO</p>
+            <p class="small-title">
+                WELCOME TO MY PORTFOLIO
+            </p>
 
             <h1>
                 Hi, I'm <span>Aditya Kumar</span>
             </h1>
 
-            <h2>Diploma CSE Student & Aspiring Developer</h2>
+            <h2>
+                Diploma CSE Student & Aspiring Developer
+            </h2>
 
             <p>
                 I am passionate about programming, web development,
@@ -139,18 +56,42 @@ sections.forEach((section) => {
             </p>
 
             <div class="buttons">
-    <a href="#projects" class="btn">View My Projects</a>
-    <a href="#contact" class="btn secondary">Contact Me</a>
-    <a href="Resume.pdf" class="btn secondary" download>Download Resume</a>
-    <a href="https://github.com/as6030461-dev/Aditya" class="btn secondary" target="_blank">GitHub</a>
-    <a href="#" class="btn secondary">LinkedIn</a>
-</div>
+
+                <a href="#projects" class="btn">
+                    View My Projects
+                </a>
+
+                <a href="#contact" class="btn secondary">
+                    Contact Me
+                </a>
+
+                <a href="Resume.pdf" class="btn secondary" download>
+                    Download Resume
+                </a>
+
+                <a href="https://github.com/as6030461-dev/Aditya"
+                   class="btn secondary"
+                   target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#"
+                   class="btn secondary">
+                    LinkedIn
+                </a>
+
+            </div>
+
         </div>
 
+
         <div class="hero-image">
+
             <div class="profile-circle">
-    <img src="profile.jpeg" alt="Aditya Kumar">
-</div>
+                <img src="profile.jpeg" alt="Aditya Kumar">
+            </div>
+
+        </div>
 
     </section>
 
@@ -158,15 +99,21 @@ sections.forEach((section) => {
     <!-- About Section -->
     <section id="about" class="section">
 
-        <p class="section-title">ABOUT ME</p>
+        <p class="section-title">
+            ABOUT ME
+        </p>
 
-        <h2>Who I Am</h2>
+        <h2>
+            Who I Am
+        </h2>
 
         <p class="about-text">
-    I am Aditya Kumar, a Diploma Computer Science Engineering student with a CGPA of 8. 
-    I have a strong foundation in programming, data structures, and web development. 
-    I am passionate about building real-world projects and continuously learning new technologies.
-</p>
+            I am Aditya Kumar, a Diploma Computer Science Engineering
+            student with a CGPA of 8. I have a strong foundation in
+            programming, data structures, and web development.
+            I am passionate about building real-world projects
+            and continuously learning new technologies.
+        </p>
 
     </section>
 
@@ -174,22 +121,49 @@ sections.forEach((section) => {
     <!-- Skills Section -->
     <section id="skills" class="section">
 
-        <p class="section-title">MY SKILLS</p>
+        <p class="section-title">
+            MY SKILLS
+        </p>
 
-        <h2>Technologies I Work With</h2>
+        <h2>
+            Technologies I Work With
+        </h2>
 
         <div class="skills-container">
 
-    <div class="skill-card">C Programming</div>
-    <div class="skill-card">C++</div>
-    <div class="skill-card">Java</div>
-    <div class="skill-card">Python</div>
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">SQL / MySQL</div>
+            <div class="skill-card">
+                C Programming
+            </div>
 
-</div>
+            <div class="skill-card">
+                C++
+            </div>
+
+            <div class="skill-card">
+                Java
+            </div>
+
+            <div class="skill-card">
+                Python
+            </div>
+
+            <div class="skill-card">
+                HTML
+            </div>
+
+            <div class="skill-card">
+                CSS
+            </div>
+
+            <div class="skill-card">
+                JavaScript
+            </div>
+
+            <div class="skill-card">
+                SQL / MySQL
+            </div>
+
+        </div>
 
     </section>
 
@@ -197,53 +171,90 @@ sections.forEach((section) => {
     <!-- Projects Section -->
     <section id="projects" class="section">
 
-        <p class="section-title">MY PROJECTS</p>
+        <p class="section-title">
+            MY PROJECTS
+        </p>
 
-        <h2>Recent Projects</h2>
+        <h2>
+            Recent Projects
+        </h2>
 
         <div class="projects-container">
 
-    <div class="project-card">
-        <h3>Student Management System</h3>
-        <p>
-            Desktop application built using Java and MySQL to manage student records,
-            attendance, and grades.
-        </p>
-        <span>Java • MySQL</span>
-    </div>
+            <div class="project-card">
 
-    <div class="project-card">
-        <h3>Online Library Management System</h3>
-        <p>
-            Web application to manage book issue and return using HTML, CSS,
-            JavaScript and PHP/MySQL.
-        </p>
-        <span>HTML • CSS • JS • PHP</span>
-    </div>
+                <h3>
+                    Student Management System
+                </h3>
 
-    <div class="project-card">
-        <h3>Chat Application</h3>
-        <p>
-            Python-based client-server chat application using sockets
-            for real-time communication.
-        </p>
-        <span>Python • Networking</span>
-    </div>
+                <p>
+                    Desktop application built using Java and MySQL
+                    to manage student records, attendance, and grades.
+                </p>
 
-</div>
+                <span>
+                    Java • MySQL
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Online Library Management System
+                </h3>
+
+                <p>
+                    Web application to manage book issue and return
+                    using HTML, CSS, JavaScript and PHP/MySQL.
+                </p>
+
+                <span>
+                    HTML • CSS • JS • PHP
+                </span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Chat Application
+                </h3>
+
+                <p>
+                    Python-based client-server chat application
+                    using sockets for real-time communication.
+                </p>
+
+                <span>
+                    Python • Networking
+                </span>
+
+            </div>
+
+        </div>
+
     </section>
 
 
     <!-- Education Section -->
     <section id="education" class="section">
 
-        <p class="section-title">EDUCATION</p>
+        <p class="section-title">
+            EDUCATION
+        </p>
 
-        <h2>My Education</h2>
+        <h2>
+            My Education
+        </h2>
 
         <div class="education-card">
 
-            <h3>Diploma in Computer Science Engineering</h3>
+            <h3>
+                Diploma in Computer Science Engineering
+            </h3>
 
             <p>
                 Centurion University of Technology and Management
@@ -261,19 +272,25 @@ sections.forEach((section) => {
     <!-- Contact Section -->
     <section id="contact" class="section contact">
 
-        <p class="section-title">CONTACT</p>
+        <p class="section-title">
+            CONTACT
+        </p>
 
-        <h2>Let's Connect</h2>
+        <h2>
+            Let's Connect
+        </h2>
 
         <p>
             Interested in working together or discussing a project?
         </p>
 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=as6030461@gmail.com" 
-   class="btn" 
-   target="_blank">
-    Send Me an Email
-</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=as6030461@gmail.com"
+           class="btn"
+           target="_blank">
+
+            Send Me an Email
+
+        </a>
 
     </section>
 
@@ -287,5 +304,110 @@ sections.forEach((section) => {
 
     </footer>
 
+
+    <!-- JavaScript -->
+    <script>
+
+        /* Scroll Reveal Animation */
+
+        const animatedItems = document.querySelectorAll(
+            ".section, .project-card, .skill-card, .education-card"
+        );
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("show");
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+        animatedItems.forEach((item) => {
+
+            item.classList.add("scroll-reveal");
+
+            observer.observe(item);
+
+        });
+
+
+        /* Hero Heading Typing Effect */
+
+        const heading = document.querySelector(".hero h1");
+
+        if (heading) {
+
+            const originalText = heading.textContent.trim();
+
+            heading.textContent = "";
+
+            let i = 0;
+
+            function typeText() {
+
+                if (i < originalText.length) {
+
+                    heading.textContent += originalText.charAt(i);
+
+                    i++;
+
+                    setTimeout(typeText, 70);
+
+                }
+
+            }
+
+            setTimeout(typeText, 700);
+
+        }
+
+
+        /* Hero Particles */
+
+        const hero = document.querySelector(".hero");
+
+        if (hero) {
+
+            for (let i = 0; i < 12; i++) {
+
+                const particle = document.createElement("span");
+
+                particle.className = "hero-particle";
+
+                particle.style.left =
+                    Math.random() * 100 + "%";
+
+                particle.style.animationDuration =
+                    (7 + Math.random() * 8) + "s";
+
+                particle.style.animationDelay =
+                    Math.random() * 8 + "s";
+
+                particle.style.opacity =
+                    0.2 + Math.random() * 0.6;
+
+                hero.appendChild(particle);
+
+            }
+
+        }
+
+    </script>
+
 </body>
+
 </html>
