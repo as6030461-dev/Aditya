@@ -12,77 +12,191 @@
 
 <body>
 
-    <!-- ================= AI PERSONAL ASSISTANT ================= -->
+    <!-- =========================
+     ADVANCED ADITYA AI
+========================= -->
 
-    <div class="ai-assistant">
+<div class="ai-assistant" id="aiAssistant">
 
-        <button
-            class="ai-toggle"
-            id="aiToggle"
-            type="button">
-            🤖
-        </button>
+    <!-- Floating Button -->
+    <button
+        class="ai-toggle"
+        id="aiToggle"
+        type="button"
+        aria-label="Open Aditya AI"
+        aria-expanded="false"
+    >
+        <span class="ai-orb">✦</span>
+        <span class="ai-pulse"></span>
+    </button>
 
-        <div class="ai-box" id="aiBox">
 
-            <div class="ai-header">
+    <!-- AI WINDOW -->
+    <div
+        class="ai-box"
+        id="aiBox"
+        aria-hidden="true"
+    >
 
-                <div>
-                    <strong>Aditya AI</strong>
-                    <small>Ask me about Aditya</small>
+        <!-- HEADER -->
+        <div class="ai-header">
+
+            <div class="ai-brand">
+
+                <div class="ai-avatar">
+                    AI
                 </div>
+
+                <div class="ai-brand-text">
+
+                    <strong>Aditya AI</strong>
+
+                    <div class="ai-status">
+                        <span></span>
+                        Online • Portfolio Assistant
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-header-actions">
+
+                <button
+                    id="aiClear"
+                    type="button"
+                    title="Clear chat"
+                    aria-label="Clear chat"
+                >
+                    ⌫
+                </button>
 
                 <button
                     id="aiClose"
-                    type="button">
-                    ×
-                </button>
-
-            </div>
-
-
-            <div class="ai-messages" id="aiMessages">
-
-                <div class="ai-message bot">
-
-                    👋 Hi! I'm Aditya's AI assistant.<br>
-
-                    Ask me anything about Aditya,
-                    his skills or projects.
-
-                </div>
-
-            </div>
-
-
-            <div class="ai-input-area">
-
-                <input
-                    type="text"
-                    id="aiInput"
-                    placeholder="Ask about Aditya..."
-                    autocomplete="off"
+                    type="button"
+                    title="Close"
+                    aria-label="Close"
                 >
-
-                <button
-                    id="micBtn"
-                    type="button"
-                    title="Speak">
-                    🎤
-                </button>
-
-                <button
-                    id="sendAiBtn"
-                    type="button"
-                    title="Send">
-                    ➤
+                    ×
                 </button>
 
             </div>
 
         </div>
 
+
+        <!-- MESSAGES -->
+        <div
+            class="ai-messages"
+            id="aiMessages"
+            aria-live="polite"
+        >
+
+            <div class="ai-message bot">
+
+                <div class="ai-avatar-small">
+                    AI
+                </div>
+
+                <div class="ai-bubble">
+
+                    <div class="ai-message-name">
+                        Aditya AI
+                    </div>
+
+                    <div class="ai-message-text">
+                        👋 Hey! I'm Aditya AI.
+                        <br><br>
+                        Mujhse Aditya ke baare mein kuch bhi pooch sakte ho —
+                        skills, projects, education, contact ya Nexora AI.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK QUESTIONS -->
+        <div
+            class="ai-suggestions"
+            id="aiSuggestions"
+        >
+
+            <button
+                type="button"
+                data-question="Aditya ki skills kya hain?"
+            >
+                💻 Skills
+            </button>
+
+            <button
+                type="button"
+                data-question="Aditya ke projects kya hain?"
+            >
+                🚀 Projects
+            </button>
+
+            <button
+                type="button"
+                data-question="Aditya kaun hai?"
+            >
+                👤 About
+            </button>
+
+            <button
+                type="button"
+                data-question="Aditya se contact kaise kare?"
+            >
+                📩 Contact
+            </button>
+
+        </div>
+
+
+        <!-- INPUT -->
+        <div class="ai-input-area">
+
+            <button
+                id="micBtn"
+                type="button"
+                title="Voice input"
+                aria-label="Voice input"
+            >
+                🎙
+            </button>
+
+
+            <textarea
+                id="aiInput"
+                rows="1"
+                placeholder="Ask me about Aditya..."
+                autocomplete="off"
+                aria-label="Ask Aditya AI"
+            ></textarea>
+
+
+            <button
+                id="sendAiBtn"
+                type="button"
+                title="Send"
+                aria-label="Send"
+            >
+                ➤
+            </button>
+
+        </div>
+
+
+        <div class="ai-footer">
+            Aditya AI • Portfolio Assistant
+        </div>
+
     </div>
+
+</div>
 
 
     <!-- ================= NAVBAR ================= -->
