@@ -12,16 +12,87 @@
 
 <body>
 
+    <!-- ================= AI PERSONAL ASSISTANT ================= -->
+
+    <div class="ai-assistant">
+
+        <button
+            class="ai-toggle"
+            id="aiToggle"
+            type="button">
+            🤖
+        </button>
+
+        <div class="ai-box" id="aiBox">
+
+            <div class="ai-header">
+
+                <div>
+                    <strong>Aditya AI</strong>
+                    <small>Ask me about Aditya</small>
+                </div>
+
+                <button
+                    id="aiClose"
+                    type="button">
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="ai-messages" id="aiMessages">
+
+                <div class="ai-message bot">
+
+                    👋 Hi! I'm Aditya's AI assistant.<br>
+
+                    Ask me anything about Aditya,
+                    his skills or projects.
+
+                </div>
+
+            </div>
+
+
+            <div class="ai-input-area">
+
+                <input
+                    type="text"
+                    id="aiInput"
+                    placeholder="Ask about Aditya..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="micBtn"
+                    type="button"
+                    title="Speak">
+                    🎤
+                </button>
+
+                <button
+                    id="sendAiBtn"
+                    type="button"
+                    title="Send">
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
     <!-- ================= NAVBAR ================= -->
 
     <header class="navbar-header">
 
         <nav class="navbar">
 
-            <!-- LEFT SIDE EMPTY -->
             <div class="nav-space"></div>
 
-            <!-- RIGHT SIDE 3 DOT MENU -->
             <div class="menu-wrapper">
 
                 <button
@@ -36,6 +107,7 @@
                     <span></span>
 
                 </button>
+
 
                 <div class="nav-menu" id="navMenu">
 
@@ -78,6 +150,7 @@
                 Android development and Artificial Intelligence.
             </p>
 
+
             <div class="buttons">
 
                 <a href="#projects" class="btn">
@@ -88,7 +161,10 @@
                     Contact Me
                 </a>
 
-                <a href="Resume.pdf" class="btn secondary" download>
+                <a
+                    href="Resume.pdf"
+                    class="btn secondary"
+                    download>
                     Download Resume
                 </a>
 
@@ -379,40 +455,48 @@
             Recent Projects
         </h2>
 
+
         <div class="projects-container">
 
 
-           <div class="project-card">
+            <!-- PROJECT 01 -->
 
-    <div class="project-number">
-        01
-    </div>
+            <div class="project-card">
 
-    <h3>
-        Nexora AI
-    </h3>
+                <div class="project-number">
+                    01
+                </div>
 
-    <p>
-        An AI-powered website builder that allows users to
-        generate, customize, preview and publish websites.
-    </p>
+                <h3>
+                    Nexora AI
+                </h3>
 
-    <span>
-        Java • AI • Web Development
-    </span>
+                <p>
+                    An AI-powered website builder that allows users to
+                    generate, customize, preview and publish websites.
+                </p>
 
-    <div class="project-buttons">
+                <span>
+                    Java • AI • Web Development
+                </span>
 
-        <a href="https://nexora-ai-webbuilder.vercel.app/"
-           class="btn"
-           target="_blank"
-           rel="noopener">
-            Live Demo
-        </a>
 
-    </div>
+                <div class="project-buttons">
 
-</div>
+                    <a
+                        href="https://nexora-ai-webbuilder.vercel.app/"
+                        class="btn"
+                        target="_blank"
+                        rel="noopener">
+                        Live Demo
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 02 -->
 
             <div class="project-card">
 
@@ -435,6 +519,8 @@
 
             </div>
 
+
+            <!-- PROJECT 03 -->
 
             <div class="project-card">
 
@@ -473,6 +559,7 @@
         <h2>
             My Education
         </h2>
+
 
         <div class="education-card">
 
@@ -557,7 +644,7 @@
     </footer>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ================= EXISTING JAVASCRIPT ================= -->
 
     <script>
 
@@ -826,6 +913,11 @@
         }
 
     </script>
+
+
+    <!-- ================= AI JAVASCRIPT FILE ================= -->
+
+    <script src="script.js"></script>
 
 </body>
 
