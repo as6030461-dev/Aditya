@@ -338,7 +338,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ⚠️ Paste your Groq key here. Anyone who opens DevTools can see it,
     // so use a dedicated key and rotate it if it leaks.
-    const GROQ_API_KEY = "PASTE_YOUR_GROQ_API_KEY_HERE";
+    const GROQ_API_KEY = "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";
     const GROQ_MODEL = "openai/gpt-oss-120b";
     const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 
